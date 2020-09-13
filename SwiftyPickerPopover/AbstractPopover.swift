@@ -176,6 +176,7 @@ open class AbstractPopover: NSObject {
         if let contentViewController = navigationController.topViewController as? AbstractPickerPopoverViewController {
             contentViewController.anyPopover = self
             self.contentViewController = contentViewController
+            contentViewController.view.backgroundColor = backgroundColor
             return contentViewController
         }
         return nil
